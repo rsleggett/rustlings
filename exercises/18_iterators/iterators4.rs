@@ -10,7 +10,16 @@ fn factorial(num: u64) -> u64 {
     // - additional variables
     // For an extra challenge, don't use:
     // - recursion
-}
+    /*let mut total: u64 = 1;
+    (1..=num).map(|curr| { 
+        total *= curr; 
+        println!("total={}, curr={}", total, curr);
+        total
+    }).max().unwrap_or(0);
+    total
+    (1..=num).product()*/
+    (2..=num).fold(1, |acc, current| acc * current)
+} 
 
 fn main() {
     // You can optionally experiment here.
